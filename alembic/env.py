@@ -11,8 +11,8 @@ raw_config = Config()
 raw_config.file_config = ConfigParser(interpolation=None)
 raw_config.config_file_name = context.config.config_file_name  # 🔥 important
 raw_config.set_main_option(
-    "sqlalchemy.url",
-    f'postgresql+psycopg2://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+    "sqlalchemy.url",settings.database_url
+    # f'postgresql+psycopg2://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 )
 config = raw_config
 
